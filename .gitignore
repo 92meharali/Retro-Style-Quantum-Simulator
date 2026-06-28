@@ -1,0 +1,12 @@
+build/
+build-win/
+build-win-native/
+dist/
+compile_commands.json
+circuit_export.json
+circuit.qasm
+circuit.png
+imgui.ini
+.cursor/
+*.tar.gz
+*.zip

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Quantum Circuit Lab
+Comment=Interactive quantum circuit simulator
+Exec=run.sh
+Icon=quantum-lab
+Terminal=false
+Categories=Education;Science;
+StartupWMClass=quantum-lab
