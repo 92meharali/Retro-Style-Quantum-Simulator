@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "num_qubits": 3,
+  "category": "Basics",
+  "description": "GHZ state (|000> + |111>) / sqrt(2)",
+  "operations": [
+    { "gate": "H", "column": 0, "qubit": 0 },
+    { "gate": "CNOT", "column": 1, "qubit": 0, "qubit2": 1 },
+    { "gate": "CNOT", "column": 2, "qubit": 0, "qubit2": 2 }
+  ]
+}

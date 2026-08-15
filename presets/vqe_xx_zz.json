@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "num_qubits": 2,
+  "category": "Research",
+  "description": "VQE ground state solver for H = X0*X1 + Z0*Z1. Rotates qubits with Ry and entangles with CNOT to reach E0 = -2.0.",
+  "operations": [
+    { "gate": "Ry", "column": 0, "qubit": 0, "param1": 0.7853981633974483 },
+    { "gate": "Ry", "column": 0, "qubit": 1, "param1": 2.356194490192345 },
+    { "gate": "CNOT", "column": 1, "qubit": 0, "qubit2": 1 },
+    { "gate": "Ry", "column": 2, "qubit": 0, "param1": 0.0 },
+    { "gate": "Ry", "column": 2, "qubit": 1, "param1": 3.141592653589793 }
+  ]
+}

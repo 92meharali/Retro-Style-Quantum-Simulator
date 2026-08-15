@@ -1,0 +1,5 @@
+if(EXISTS "D:/Documents/GitHub/Retro-Style-Quantum-Simulator/cmake-build-debug/tests/qsim_tests-b12d07c_tests.cmake")
+  include("D:/Documents/GitHub/Retro-Style-Quantum-Simulator/cmake-build-debug/tests/qsim_tests-b12d07c_tests.cmake")
+else()
+  add_test(qsim_tests_NOT_BUILT-b12d07c qsim_tests_NOT_BUILT-b12d07c)
+endif()

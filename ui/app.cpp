@@ -1,5 +1,7 @@
 #include "app.hpp"
 #include "util.hpp"
+#include "vqe_view.hpp"
+#include "qaoa_view.hpp"
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
@@ -275,6 +277,11 @@ const char* preset_label(const std::string& stem) {
     if (stem == "bernstein_vazirani") return "Bernstein-Vazirani";
     if (stem == "superdense_coding") return "Superdense coding";
     if (stem == "vqc_demo") return "VQC demo";
+    if (stem == "vqe_xx_zz") return "VQE (XX+ZZ)";
+    if (stem == "vqe_h2_molecule") return "VQE (H2 Molecule)";
+    if (stem == "vqe_ising_model") return "VQE (Ising Model)";
+    if (stem == "qaoa_maxcut_triangle") return "QAOA (Triangle)";
+    if (stem == "qaoa_maxcut_4cycle") return "QAOA (4-Cycle)";
     return stem.c_str();
 }
 
@@ -713,6 +720,8 @@ void app_init(AppState& app, const std::string& presets_dir) {
     app.circuit.num_qubits = 2;
     app.simulator = qsim::Simulator(2);
     app.sync_simulator();
+    app.init_vqe();
+    app.init_qaoa();
     app.status_message = "Ready.";
 }
 
@@ -1163,10 +1172,53 @@ void app_frame(AppState& app, GLFWwindow* window) {
     ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(4, 2));
     ImGui::BeginGroup();
 
-    ImGui::PushTextWrapPos(ImGui::GetCursorPosX() + content_w);
-    ImGui::TextWrapped(
-        "Pick a gate, click a circuit cell. CX/CZ/CCX: multi-click. ERASE removes gates.");
-    ImGui::PopTextWrapPos();
+    // Background auto-optimization steps
+    if (app.vqe_auto_running && app.vqe_session && !app.vqe_session->is_converged()) {
+        app.vqe_session->step();
+    }
+    if (app.qaoa_auto_running && app.qaoa_session && !app.qaoa_session->is_converged()) {
+        app.qaoa_session->step();
+    }
+
+    // Top-Level Studio Navigation Bar
+    {
+        const bool tab_ed = (app.current_tab == AppTab::CircuitEditor);
+        const bool tab_vqe = (app.current_tab == AppTab::VQEStudio);
+        const bool tab_qaoa = (app.current_tab == AppTab::QAOAStudio);
+
+        if (tab_ed) ImGui::PushStyleColor(ImGuiCol_Button, kRetroSelected);
+        if (ImGui::Button("[1] Circuit Simulator & Editor", ImVec2(210.0f, 26.0f))) {
+            app.current_tab = AppTab::CircuitEditor;
+        }
+        if (tab_ed) ImGui::PopStyleColor();
+
+        ImGui::SameLine(0, 6);
+        if (tab_vqe) ImGui::PushStyleColor(ImGuiCol_Button, kRetroSelected);
+        if (ImGui::Button("[2] VQE Optimization Studio", ImVec2(210.0f, 26.0f))) {
+            app.current_tab = AppTab::VQEStudio;
+        }
+        if (tab_vqe) ImGui::PopStyleColor();
+
+        ImGui::SameLine(0, 6);
+        if (tab_qaoa) ImGui::PushStyleColor(ImGuiCol_Button, kRetroSelected);
+        if (ImGui::Button("[3] QAOA MaxCut Studio", ImVec2(190.0f, 26.0f))) {
+            app.current_tab = AppTab::QAOAStudio;
+        }
+        if (tab_qaoa) ImGui::PopStyleColor();
+
+        ImGui::Separator();
+    }
+
+    if (app.current_tab == AppTab::VQEStudio) {
+        draw_vqe_studio(app, content_w, layout.wide);
+    } else if (app.current_tab == AppTab::QAOAStudio) {
+        draw_qaoa_studio(app, content_w, layout.wide);
+    } else {
+        // Mode 1: Circuit Editor
+        ImGui::PushTextWrapPos(ImGui::GetCursorPosX() + content_w);
+        ImGui::TextWrapped(
+            "Pick a gate, click a circuit cell. CX/CZ/CCX: multi-click. ERASE removes gates.");
+        ImGui::PopTextWrapPos();
 
     if (!app.circuit_description.empty()) {
         begin_fieldset("Preset / circuit description");
@@ -1729,8 +1781,9 @@ void app_frame(AppState& app, GLFWwindow* window) {
         draw_qubit_viz();
     }
 
-    draw_state_compare();
-    draw_shot_histogram();
+        draw_state_compare();
+        draw_shot_histogram();
+    }
 
     // Status bar
     {

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "num_qubits": 2,
+  "category": "Algorithms",
+  "description": "Superdense coding: share a Bell pair, encode classical bits 11 (X then Z on Alice's qubit), Bob decodes with CNOT+H.",
+  "operations": [
+    { "gate": "H", "column": 0, "qubit": 0 },
+    { "gate": "CNOT", "column": 1, "qubit": 0, "qubit2": 1 },
+    { "gate": "X", "column": 2, "qubit": 0 },
+    { "gate": "Z", "column": 3, "qubit": 0 },
+    { "gate": "CNOT", "column": 4, "qubit": 0, "qubit2": 1 },
+    { "gate": "H", "column": 5, "qubit": 0 }
+  ]
+}

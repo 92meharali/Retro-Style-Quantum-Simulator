@@ -1,0 +1,155 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "third_party/Catch2-3.5.2/src/libCatch2Maind.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"target_compile_options",
+			"add_cxx_flag_if_supported_to_targets",
+			"add_build_reproducibility_settings"
+		],
+		"files" : 
+		[
+			"third_party/Catch2-3.5.2/src/CMakeLists.txt",
+			"third_party/Catch2-3.5.2/CMake/CatchMiscFunctions.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 403,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 410,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 407,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 119,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 16,
+				"parent" : 4
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -std=gnu++20 -fdiagnostics-color=always"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-ffile-prefix-map=D:/Documents/GitHub/Retro-Style-Quantum-Simulator/third_party/Catch2-3.5.2/="
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "D:/Documents/GitHub/Retro-Style-Quantum-Simulator/third_party/Catch2-3.5.2/src/catch2/.."
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/Documents/GitHub/Retro-Style-Quantum-Simulator/cmake-build-debug/third_party/Catch2-3.5.2/generated-includes"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "Catch2::@9de8581e05d0346bb7f7"
+		}
+	],
+	"id" : "Catch2WithMain::@9de8581e05d0346bb7f7",
+	"name" : "Catch2WithMain",
+	"nameOnDisk" : "libCatch2Maind.a",
+	"paths" : 
+	{
+		"build" : "third_party/Catch2-3.5.2/src",
+		"source" : "third_party/Catch2-3.5.2/src"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "third_party/Catch2-3.5.2/src/catch2/internal/catch_main.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}
