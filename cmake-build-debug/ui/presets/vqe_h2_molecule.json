@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "num_qubits": 2,
+  "category": "Research",
+  "description": "VQE ground state circuit for minimal-basis STO-3G Hydrogen molecule (H2) at equilibrium bond distance R=0.7414 A.",
+  "operations": [
+    { "gate": "Ry", "column": 0, "qubit": 0, "param1": 0.1 },
+    { "gate": "Ry", "column": 0, "qubit": 1, "param1": 0.1 },
+    { "gate": "CNOT", "column": 1, "qubit": 0, "qubit2": 1 },
+    { "gate": "Ry", "column": 2, "qubit": 0, "param1": 0.1 },
+    { "gate": "Ry", "column": 2, "qubit": 1, "param1": 0.1 }
+  ]
+}

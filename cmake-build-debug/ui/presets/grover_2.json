@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "num_qubits": 2,
+  "category": "Algorithms",
+  "description": "2-qubit Grover search for |11>. One oracle (CZ phase flip) + diffusion amplifies the marked state.",
+  "operations": [
+    { "gate": "H", "column": 0, "qubit": 0 },
+    { "gate": "H", "column": 0, "qubit": 1 },
+    { "gate": "CZ", "column": 1, "qubit": 0, "qubit2": 1 },
+    { "gate": "H", "column": 2, "qubit": 0 },
+    { "gate": "H", "column": 2, "qubit": 1 },
+    { "gate": "X", "column": 3, "qubit": 0 },
+    { "gate": "X", "column": 3, "qubit": 1 },
+    { "gate": "H", "column": 4, "qubit": 1 },
+    { "gate": "CZ", "column": 5, "qubit": 0, "qubit2": 1 },
+    { "gate": "H", "column": 6, "qubit": 1 },
+    { "gate": "X", "column": 7, "qubit": 0 },
+    { "gate": "X", "column": 7, "qubit": 1 },
+    { "gate": "H", "column": 8, "qubit": 0 },
+    { "gate": "H", "column": 8, "qubit": 1 }
+  ]
+}

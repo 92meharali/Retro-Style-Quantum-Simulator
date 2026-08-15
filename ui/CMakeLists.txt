@@ -5,6 +5,8 @@ set(IMGUI_DIR ${CMAKE_SOURCE_DIR}/third_party/imgui-1.90.4)
 add_executable(quantum-lab
     app.cpp
     util.cpp
+    vqe_view.cpp
+    qaoa_view.cpp
     ${IMGUI_DIR}/imgui.cpp
     ${IMGUI_DIR}/imgui_draw.cpp
     ${IMGUI_DIR}/imgui_tables.cpp

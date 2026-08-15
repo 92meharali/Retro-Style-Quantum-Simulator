@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "num_qubits": 3,
+  "category": "Algorithms",
+  "description": "Deutsch-Jozsa (constant f=0): 2 input qubits + ancilla. After H layers, inputs stay |00> — oracle is identity.",
+  "operations": [
+    { "gate": "X", "column": 0, "qubit": 2 },
+    { "gate": "H", "column": 1, "qubit": 0 },
+    { "gate": "H", "column": 1, "qubit": 1 },
+    { "gate": "H", "column": 1, "qubit": 2 },
+    { "gate": "Barrier", "column": 2, "qubit": 0 },
+    { "gate": "H", "column": 3, "qubit": 0 },
+    { "gate": "H", "column": 3, "qubit": 1 }
+  ]
+}

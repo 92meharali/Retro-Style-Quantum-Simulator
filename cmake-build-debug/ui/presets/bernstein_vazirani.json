@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "num_qubits": 3,
+  "category": "Algorithms",
+  "description": "Bernstein-Vazirani with hidden string s=10. Phase kickback reveals s in the input register after final Hadamards.",
+  "operations": [
+    { "gate": "H", "column": 0, "qubit": 0 },
+    { "gate": "H", "column": 0, "qubit": 1 },
+    { "gate": "X", "column": 1, "qubit": 2 },
+    { "gate": "H", "column": 2, "qubit": 2 },
+    { "gate": "CNOT", "column": 3, "qubit": 0, "qubit2": 2 },
+    { "gate": "H", "column": 4, "qubit": 0 },
+    { "gate": "H", "column": 4, "qubit": 1 }
+  ]
+}

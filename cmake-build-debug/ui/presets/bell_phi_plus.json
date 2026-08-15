@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "num_qubits": 2,
+  "category": "Basics",
+  "description": "Bell state |Phi+> = (|00> + |11>) / sqrt(2)",
+  "operations": [
+    { "gate": "H", "column": 0, "qubit": 0 },
+    { "gate": "CNOT", "column": 1, "qubit": 0, "qubit2": 1 }
+  ]
+}

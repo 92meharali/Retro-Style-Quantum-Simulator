@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "num_qubits": 3,
+  "category": "Algorithms",
+  "description": "QAOA MaxCut circuit for 3-node Triangle graph: H on all qubits + cost unitary (ZZ terms on edges 0-1, 1-2, 2-0) + mixer unitary (Rx on all qubits).",
+  "operations": [
+    { "gate": "H", "column": 0, "qubit": 0 },
+    { "gate": "H", "column": 0, "qubit": 1 },
+    { "gate": "H", "column": 0, "qubit": 2 },
+    { "gate": "CNOT", "column": 1, "qubit": 0, "qubit2": 1 },
+    { "gate": "Rz", "column": 2, "qubit": 1, "param1": -0.61 },
+    { "gate": "CNOT", "column": 3, "qubit": 0, "qubit2": 1 },
+    { "gate": "CNOT", "column": 4, "qubit": 1, "qubit2": 2 },
+    { "gate": "Rz", "column": 5, "qubit": 2, "param1": -0.61 },
+    { "gate": "CNOT", "column": 6, "qubit": 1, "qubit2": 2 },
+    { "gate": "CNOT", "column": 7, "qubit": 0, "qubit2": 2 },
+    { "gate": "Rz", "column": 8, "qubit": 2, "param1": -0.61 },
+    { "gate": "CNOT", "column": 9, "qubit": 0, "qubit2": 2 },
+    { "gate": "Rx", "column": 10, "qubit": 0, "param1": 0.785 },
+    { "gate": "Rx", "column": 10, "qubit": 1, "param1": 0.785 },
+    { "gate": "Rx", "column": 10, "qubit": 2, "param1": 0.785 }
+  ]
+}

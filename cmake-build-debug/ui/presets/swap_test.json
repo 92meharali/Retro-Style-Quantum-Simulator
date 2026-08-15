@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "num_qubits": 2,
+  "category": "Basics",
+  "description": "SWAP test: X on q0 then SWAP should move excitation to q1",
+  "operations": [
+    { "gate": "X", "column": 0, "qubit": 0 },
+    { "gate": "SWAP", "column": 1, "qubit": 0, "qubit2": 1 }
+  ]
+}

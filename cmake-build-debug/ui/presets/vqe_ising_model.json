@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "num_qubits": 3,
+  "category": "Research",
+  "description": "3-qubit Transverse-Field Ising Model (TFIM) VQE variational ground state ansatz.",
+  "operations": [
+    { "gate": "Ry", "column": 0, "qubit": 0, "param1": 0.5 },
+    { "gate": "Ry", "column": 0, "qubit": 1, "param1": 0.5 },
+    { "gate": "Ry", "column": 0, "qubit": 2, "param1": 0.5 },
+    { "gate": "CNOT", "column": 1, "qubit": 0, "qubit2": 1 },
+    { "gate": "CNOT", "column": 2, "qubit": 1, "qubit2": 2 },
+    { "gate": "Ry", "column": 3, "qubit": 0, "param1": 0.2 },
+    { "gate": "Ry", "column": 3, "qubit": 1, "param1": 0.2 },
+    { "gate": "Ry", "column": 3, "qubit": 2, "param1": 0.2 }
+  ]
+}

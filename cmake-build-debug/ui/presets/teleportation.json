@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "num_qubits": 3,
+  "category": "Advanced",
+  "description": "Quantum teleportation circuit (simplified demo layout)",
+  "operations": [
+    { "gate": "H", "column": 0, "qubit": 1 },
+    { "gate": "CNOT", "column": 1, "qubit": 1, "qubit2": 2 },
+    { "gate": "CNOT", "column": 2, "qubit": 0, "qubit2": 1 },
+    { "gate": "H", "column": 3, "qubit": 0 },
+    { "gate": "CZ", "column": 4, "qubit": 1, "qubit2": 2 },
+    { "gate": "CNOT", "column": 5, "qubit": 0, "qubit2": 2 }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "num_qubits": 2,
+  "category": "Basics",
+  "description": "Entangle with Y: H on q0, CNOT, Y on q1",
+  "operations": [
+    { "gate": "H", "column": 0, "qubit": 0 },
+    { "gate": "CNOT", "column": 1, "qubit": 0, "qubit2": 1 },
+    { "gate": "Y", "column": 2, "qubit": 1 }
+  ]
+}

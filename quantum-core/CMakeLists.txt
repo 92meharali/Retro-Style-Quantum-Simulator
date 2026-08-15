@@ -8,6 +8,11 @@ add_library(quantum-core
     src/simulator.cpp
     src/json_io.cpp
     src/qasm_io.cpp
+    src/pauli.cpp
+    src/ansatz.cpp
+    src/qaoa.cpp
+    src/optimizer.cpp
+    src/vqe.cpp
 )
 
 target_include_directories(quantum-core

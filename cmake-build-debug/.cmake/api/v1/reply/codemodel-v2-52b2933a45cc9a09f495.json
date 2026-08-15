@@ -1,0 +1,286 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						3,
+						4,
+						5,
+						7
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "third_party/Catch2-3.5.2",
+					"childIndexes" : 
+					[
+						2
+					],
+					"jsonFile" : "directory-third_party.Catch2-3.5.2-Debug-806151bb3bbb620e859b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "third_party/Catch2-3.5.2"
+				},
+				{
+					"build" : "third_party/Catch2-3.5.2/src",
+					"jsonFile" : "directory-third_party.Catch2-3.5.2.src-Debug-640503357c860b3b994f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "third_party/Catch2-3.5.2/src",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				},
+				{
+					"build" : "quantum-core",
+					"jsonFile" : "directory-quantum-core-Debug-b562505be1cf7d08e7be.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "quantum-core",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "tests",
+					"jsonFile" : "directory-tests-Debug-70e4927a02b591d5c1f8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tests",
+					"targetIndexes" : 
+					[
+						3,
+						4
+					]
+				},
+				{
+					"build" : "third_party/glfw-3.4",
+					"childIndexes" : 
+					[
+						6
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-third_party.glfw-3.4-Debug-6fe2d9e7fb2a2ff37dcc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.4"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "third_party/glfw-3.4",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "third_party/glfw-3.4/src",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-third_party.glfw-3.4.src-Debug-0aa4dff137af0ca31ec5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.4"
+					},
+					"parentIndex" : 5,
+					"projectIndex" : 3,
+					"source" : "third_party/glfw-3.4/src",
+					"targetIndexes" : 
+					[
+						2,
+						8
+					]
+				},
+				{
+					"build" : "ui",
+					"jsonFile" : "directory-ui-Debug-2a6e294cdf0513704cdb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "ui",
+					"targetIndexes" : 
+					[
+						6
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						4,
+						7
+					],
+					"name" : "QuantumSimulator",
+					"targetIndexes" : 
+					[
+						3,
+						4,
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2
+					],
+					"name" : "Catch2",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "quantum-core",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						5,
+						6
+					],
+					"name" : "GLFW",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						7,
+						8
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "Catch2::@9de8581e05d0346bb7f7",
+					"jsonFile" : "target-Catch2-Debug-23d64b5966ec82f6fbfc.json",
+					"name" : "Catch2",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "Catch2WithMain::@9de8581e05d0346bb7f7",
+					"jsonFile" : "target-Catch2WithMain-Debug-e0e956cc5abba8aea9e3.json",
+					"name" : "Catch2WithMain",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "glfw::@113fd6414c37b24069d5",
+					"jsonFile" : "target-glfw-Debug-981459a6c13654348e44.json",
+					"name" : "glfw",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "qsim_benchmarks::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-qsim_benchmarks-Debug-106d681e35c368eace89.json",
+					"name" : "qsim_benchmarks",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "qsim_tests::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-qsim_tests-Debug-3820536a1e3eca5446d6.json",
+					"name" : "qsim_tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "quantum-core::@680cf9777e137288c3fe",
+					"jsonFile" : "target-quantum-core-Debug-e27918d9451adce8b769.json",
+					"name" : "quantum-core",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "quantum-lab::@19b8bf288843bf358763",
+					"jsonFile" : "target-quantum-lab-Debug-41172f178700fc8ec31b.json",
+					"name" : "quantum-lab",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "uninstall::@06540e4a0647293b428e",
+					"jsonFile" : "target-uninstall-Debug-63c14e64ed8a5b46800c.json",
+					"name" : "uninstall",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "update_mappings::@113fd6414c37b24069d5",
+					"jsonFile" : "target-update_mappings-Debug-d45961f2d526bfdb4592.json",
+					"name" : "update_mappings",
+					"projectIndex" : 3
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Documents/GitHub/Retro-Style-Quantum-Simulator/cmake-build-debug",
+		"source" : "D:/Documents/GitHub/Retro-Style-Quantum-Simulator"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
